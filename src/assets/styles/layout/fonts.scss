@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700&subset=cyrillic');
+
+@font-face {
+  font-family: 'bernier';
+  src: url('/assets/fonts/bernierregular-regular-webfont.woff') format('woff'), 
+       url('/assets/fonts/bernierregular-regular-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'bernier_shaderegular';
+  src: url('../fonts/berniershade-regular-webfont.woff2') format('woff2'),
+       url('../fonts/berniershade-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'bernier_distressedregular';
+  src: url('../fonts/bernierdistressed-regular-webfont.woff2') format('woff2'),
+       url('../fonts/bernierdistressed-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fontawesome';
+  src: url('/assets/fonts/fontawesome-webfont.woff') format('woff'),
+       url('/assets/fonts/fontawesome-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

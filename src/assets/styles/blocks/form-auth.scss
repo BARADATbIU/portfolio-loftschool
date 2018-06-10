@@ -1,0 +1,131 @@
+.form-auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 17px;
+    position: relative;
+    width: 100%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--text {
+      margin-bottom: 7px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 12px 20px;
+    padding-left: 60px;
+    color: $grey;
+
+    &::placeholder {
+      color: $greyLight;
+    }
+  }
+}
+
+.form-auth__icon-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(240, 239, 233);
+}
+
+.form-auth__icon {
+  width: 1rem;
+  height: 1rem;
+  fill: $greyLight;
+}
+
+.form-auth__block-title {
+  display: block;
+  margin-left: 10px;
+
+  &--bold {
+    font-weight: 700;
+  }
+}
+
+.form-auth__radio,
+.form-auth__checkbox {
+  display: flex;
+  align-items: center;
+  margin-right: 33px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.form-auth__radio-input,
+.form-auth__checkbox-input {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-auth__radio-fake {
+  position: relative;
+  @include circle(1rem);
+  background-color: white;
+
+  &::before {
+    content: '';
+    display: block;
+    @include circle(0);
+    background-color: $greenLight;
+    @include centered;
+  }
+}
+
+.form-auth__radio-input:checked {
+  
+  &+.form-auth__radio-fake::before {
+    @include size(8px, 8px)
+  } 
+
+  &~.form-auth__block-title {
+    color: $greenLight;    
+  }
+}
+
+.form-auth__checkbox-fake {
+  @include size(1rem, 1rem);
+  background-color: white;
+  position: relative;
+}
+
+.form-auth__checkbox-input:checked {
+
+  &+.form-auth__checkbox-fake {
+    background-color: $greenLight;
+  }
+
+  &+.form-auth__checkbox-fake::before {
+    content: '';   
+    background: url('/assets/images/svg-icon/check.svg') 50% no-repeat;
+    background-size: contain;
+    width: 11px;
+    height: 9px;
+    @include centered;
+  }
+}

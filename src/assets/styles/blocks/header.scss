@@ -1,0 +1,38 @@
+.header {
+  background-image: url('/assets/images/bg/about-bg.jpg');
+  @include cover;
+}
+
+.header__about {
+  width: 90%;
+  position: relative;
+}
+
+.header__title {
+  position: absolute;
+  top: 0;
+  fill: rgba(white, .06);
+  height: 250px;
+  width: 100%;
+}
+
+.header__socials {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.header__button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 3.5rem;
+  z-index: 9;
+}
+
+.arrow-scroll {
+  height: 1rem;
+  width: 2rem;
+  fill: $white;
+}
+

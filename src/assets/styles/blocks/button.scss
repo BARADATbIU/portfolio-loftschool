@@ -1,0 +1,27 @@
+.button {
+  color: $white;
+  font-weight: 500;
+  outline: none;
+  transition: .3s;
+
+  &:hover {
+    background-color: white;
+    color: $greenLight;
+    border-color: transparent;
+  }
+}
+
+.button--intro {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 5px;
+  padding: 12px 28px;
+}
+
+.button-scroll {
+  background-color: transparent;
+  outline: none;
+}

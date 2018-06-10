@@ -1,0 +1,44 @@
+.nav-mobile {
+  position: fixed;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999px;
+
+  &.is-active {
+    top: 0;
+    bottom: 0;
+    background-color: rgba($greenLight, .87);
+    transition: .5s;
+
+    .nav-menu {
+      display: block;
+    }
+  }
+}
+
+.nav-menu {
+    display: none;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__link {
+    font-family: 'sansus';
+    color: $white;
+    font-size: 63px;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+  }
+}

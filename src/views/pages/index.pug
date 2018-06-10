@@ -1,0 +1,51 @@
+extends ../auth.layout.pug 
+
+block content
+
+  -
+    var menuFirst = [
+      {
+        'name': 'Мои работы',
+        'href': './works.html',
+        'class': []
+      },
+      {
+        'name': 'Обо мне',
+        'href': './about.html',
+        'class': []
+      },
+      {
+        'name': 'Блог',
+        'href': './blog.html',
+        'class': []
+      }
+    ]
+  -
+    var menuSecond = [
+      {
+        'name': 'На главную',
+        'href': '#',
+        'class': ['equal', 'flip']
+      },
+      {
+        'name': 'Войти',
+        'href': '#',
+        'class': ['equal', 'submit']
+      }
+    ]
+
+  section.section.intro
+    .intro__box
+      .intro__box-first
+        .intro__content
+          +user('index')
+          +socials('socials', socList)
+        +nav('nav', menuFirst)
+      .intro__box-second
+        .intro__content.intro__content--second
+          include ../common/form-auth
+        +nav('nav', menuSecond)
+
+    button.button.button--intro Авторизоваться
+    .footer-copyright
+      include ../common/copyright

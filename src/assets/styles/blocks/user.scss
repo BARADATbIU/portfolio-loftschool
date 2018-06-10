@@ -1,0 +1,28 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $grey;
+
+  &--about {
+    color: white;
+
+    .user__name {
+      font-size: 35px;
+    }
+  }
+
+  &__photo {
+    padding-bottom: 10px;
+  }
+  
+  &__photo-img {
+    @include circle(140px)
+  }
+
+  &__name {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+}

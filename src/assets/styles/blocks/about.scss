@@ -1,0 +1,28 @@
+.about {
+  display: flex;
+  position: relative;
+  &__left,
+  &__right {
+    flex: 1;
+    padding: 25px 0;
+  }
+  &__left {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: $beigelight;
+    &-col {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      margin: 0 20px;
+    }
+  }
+  &__title {
+    margin-top: -22px;
+  }
+  &__right {
+    flex: 1;
+    background-color: $beige;
+  }
+}

@@ -1,0 +1,72 @@
+.title {
+  position: relative;
+  flex-direction: column;
+  color: $greyDark;
+  font-family: 'bernier';
+  font-size: 63px;
+  text-transform: uppercase;
+  @include center;
+
+  &.title--about {
+
+    .title__icon {
+      width: 330px;
+      height: 120px;
+    }
+  }
+
+  &.title--works {
+
+    .title__icon {
+      width: 440px;
+      height: 135px;
+    }
+  }
+
+  &.title--reviews {
+
+    .title__icon {
+      width: 440px;
+      height: 160px;
+    }
+  }
+
+  &.title--blog {
+
+    .title__icon {
+      width: 300px;
+      height: 200px;
+      fill: rgba(255, 255, 255, .07);
+      top: -40px;
+    }
+
+    .title__text {
+      color: white;
+    }
+  }
+}
+
+.title__icon {
+  fill: rgba(109, 112, 112, .07);
+  position: absolute;
+  transition: .3s;
+}
+
+.title__text {
+  font-size: 63px;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+
+    &::before,
+    &::after {
+      content: '';
+      margin: 0 15px;
+      width: 22px;
+      height: 5px;
+      background-color: $greyLight;
+      transition: .3s;
+    }
+}

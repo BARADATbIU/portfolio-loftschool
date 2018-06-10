@@ -1,0 +1,55 @@
+mixin icon(iconName, iconClass)
+  svg(class=`${iconClass}`)
+    use(xlink:href=`./assets/images/icons/sprite.svg#${iconName}`)
+
+mixin image(imagePath, imageAlt, imageClass)
+  img(src=`./assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
+
+mixin nav(className, items, activeItem)
+  nav(class=className)
+    ul(class=`${className}__list`)
+      each item, i in items
+        -var modClassName= ''
+        if (item.class)
+          each modClass in item.class
+            - modClassName += ` ${className}__item--${modClass}`
+        li(class=`${className}__item` + modClassName + (i === activeItem ? ' is-active' : ''))
+          a(class=`${className}__link` href=`${item.href ? item.href : '#'}`)= item.name
+
+mixin socials(className, items)
+  ul(class=className)
+      each val, item in items
+          li(class=`${className}__item`)
+              a(class=`${className}__link` href=`${val}` target="_blank")
+                  +icon(item, `${className}__icon ${className}__icon--${item}`)
+
+mixin user(className)
+  .user(class=`user--${className}`)
+    .user__photo
+      +image('user-photo.jpg', 'Dmitry Kharlamov', 'user__photo-img')
+    h2.user__name Харламов Дмитрий
+    span.user__desc Личный сайт вэб разработчика
+
+mixin title(titleName, titleImg, titleText, titlesubText)
+  div(class=`title title--${titleName}`)
+    +icon(titleImg, 'title__icon')
+    h1.title__text #{titleText}
+    .title__subtext #{titlesubText}  
+        
+mixin subtitle(titleName, titleText, titlesubText)
+  div(class=`subtitle subtitle--${titleName}`)
+    h2.subtitle__text #{titleText}      
+    .subtitle__subtext #{titlesubText} 
+
+mixin triangles(className)
+  div(class=className)
+    svg(viewBox='0 0 1000 110' preserveAspectRatio='none').triangles__svg
+      polygon(points='0,0 0,110 500,110').triangles__svg-left
+      polygon(points='500,110 1000,0 1000,110').triangles__svg-right
+
+mixin nav-blog(activeItem, items) 
+  .nav-blog       
+    ul.nav-blog__list
+      each item, i in items
+        li(class=`nav-blog__item` + ((i === activeItem) ? ` is-active` : ''))
+          a(href=`${item[1]}` class='nav-blog__link')= item[0]

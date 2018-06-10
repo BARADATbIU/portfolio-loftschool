@@ -1,0 +1,14 @@
+footer.footer
+  .footer__row
+    .footer__col
+      .footer__nav
+        +nav('footer-menu', menu)
+    .footer__col 
+      .footer__socials
+        +socials('footer-socials', socList)
+  .footer__row
+    .footer__col
+      .footer__text
+        p Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+    .footer__col
+      include ../common/copyright.pug

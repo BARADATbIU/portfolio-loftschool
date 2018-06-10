@@ -1,0 +1,11 @@
+.map {
+  background-image: url('./assets/images/bg/map-bg.jpg');
+  @include cover;
+  height: 100vh;
+  position: relative;
+}
+
+.map__data {
+  height: 100%;
+  @include center;
+}

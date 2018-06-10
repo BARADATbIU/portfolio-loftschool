@@ -1,0 +1,39 @@
+.nav {
+  width: 100%;
+
+  &__list {
+    display: flex;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  &__item {
+    flex-grow: 1;
+
+    &--equal {
+      flex: 1;
+    }
+  }
+
+  &__item:last-child {
+
+    .nav__link {
+      border-right: none;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: white;
+    padding: 15px 0;
+    background-color: $greenLight;
+    border-right: 2px solid rgba(white, .5);
+    text-align: center;
+    font-weight: 500;
+    transition: .3s;
+
+    &:hover {
+      background-color: $green;
+    }
+  }
+}
