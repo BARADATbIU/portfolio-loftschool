@@ -1,7 +1,8 @@
 .footer-copyright {
   position: absolute;
   bottom: 2.5rem;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .footer {

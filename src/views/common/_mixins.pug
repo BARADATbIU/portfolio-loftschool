@@ -1,5 +1,5 @@
 mixin icon(iconName, iconClass)
-  svg(class=`${iconClass}`)
+  svg(class=iconClass)
     use(xlink:href=`./assets/images/icons/sprite.svg#${iconName}`)
 
 mixin image(imagePath, imageAlt, imageClass)
@@ -16,15 +16,15 @@ mixin nav(className, items, activeItem)
         li(class=`${className}__item` + modClassName + (i === activeItem ? ' is-active' : ''))
           a(class=`${className}__link` href=`${item.href ? item.href : '#'}`)= item.name
 
-mixin socials(className, items)
-  ul(class=className)
-      each val, item in items
-          li(class=`${className}__item`)
-              a(class=`${className}__link` href=`${val}` target="_blank")
-                  +icon(item, `${className}__icon ${className}__icon--${item}`)
+mixin socials(modClassName, items)
+  ul.socials(class=(modClassName === '') ? '' : `socials--${modClassName}`)
+    each val, item in items
+      li(class=`socials__item`)
+        a(class=`socials__link` href=`${val}` target="_blank")
+          +icon(item, `socials__icon socials__icon--${item}`)
 
-mixin user(className)
-  .user(class=`user--${className}`)
+mixin user(modClassName)
+  .user(class=(modClassName === '') ? '' : `user--${modClassName}`)
     .user__photo
       +image('user-photo.jpg', 'Dmitry Kharlamov', 'user__photo-img')
     h2.user__name Харламов Дмитрий
@@ -41,8 +41,8 @@ mixin subtitle(titleName, titleText, titlesubText)
     h2.subtitle__text #{titleText}      
     .subtitle__subtext #{titlesubText} 
 
-mixin triangles(className)
-  div(class=className)
+mixin triangles(modClassName)
+  .triangles(class=(modClassName === '') ? '' : `triangles--${modClassName}`)
     svg(viewBox='0 0 1000 110' preserveAspectRatio='none').triangles__svg
       polygon(points='0,0 0,110 500,110').triangles__svg-left
       polygon(points='500,110 1000,0 1000,110').triangles__svg-right
