@@ -1,6 +1,4 @@
-.socials,
-.header-socials,
-.footer-socials {
+.socials {
   display: flex;
   align-items: center;
 
@@ -24,15 +22,6 @@
       .socials__icon {
         fill: $green;
       }
-
-      .header-socials__icon,
-      .footer-socials__icon {
-        fill: white;
-      }
-
-      .footer-socials__icon {
-        fill: rgba($grey, .85);
-      }
     }
   }
 
@@ -44,19 +33,42 @@
   }
 }
 
-.footer-socials__link {
+.socials--header {
+
+  & .socials__link {
+
+    &:hover {
+
+      .socials__icon {
+        fill: white;
+      }
+    }
+  }
+}
+
+.socials--footer {
+
+  & .socials__link {
   border: 1px solid white;
   border-radius: 50%;
   transition: .3s;
 
-  &:hover {
-    background-color: white;
+    &:hover {
+      background-color: white;
+
+      .socials__icon {
+        fill: rgba($grey, .85);
+      }
+    }
   }
 }
 
-.header-socials__icon,
-.footer-socials__icon {
+.socials--footer,
+.socials--header {
+
+  & .socials__icon {
   width: 25px;
   height: 20px;
   fill: rgba(white, .5);
+  }
 }

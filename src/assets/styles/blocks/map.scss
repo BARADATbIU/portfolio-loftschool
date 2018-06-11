@@ -6,6 +6,6 @@
 }
 
 .map__data {
-  height: 100%;
-  @include center;
+  @include centered;
+  z-index: 1;
 }

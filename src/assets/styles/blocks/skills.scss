@@ -34,7 +34,7 @@
 
 .skills__img {
   position: relative;    
-  @include center;   
+     
   margin-left: 40px;
   margin-bottom: 40px;
 
@@ -44,7 +44,7 @@
 }
 
 .skills__img-title {
-  position: absolute;
+  @include centered;
   max-width: 70px;
   font-size: 14px;
   color: $greenLight;

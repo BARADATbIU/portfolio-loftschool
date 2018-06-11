@@ -1,0 +1,16 @@
+.post {
+  &__head {
+    font-family: 'bernier';
+    font-size: 35px;
+    color: $greyDark;
+    margin-bottom: 20px;
+  }
+  &__data {
+    display: block;
+    color: $greenLight;
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+}
