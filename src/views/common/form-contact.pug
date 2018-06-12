@@ -1,0 +1,10 @@
+form.form-contact(action="")
+  .form-contact__container
+    .form-contact__row
+      input.form-contact__input(type="text" name='name' placeholder='Имя')
+    .form-contact__row
+      input.form-contact__input(type="text" name='email' placeholder='Email')
+    .form-contact__row
+      textarea.form-contact__textarea(placeholder='Ваше сообщение')
+    .form__buttons
+      +nav('nav', menuFormContact)

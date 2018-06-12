@@ -1,0 +1,20 @@
+.slider
+  .slider__about
+    .slider__about-title     
+      .subtitle.subtitle_slider
+        .slider__about-title-text       
+    .slider__about-desc 
+    a.slider__about-link(href='#' target="_blank")
+      icon('link','slider__about-link-img')
+      .slider__about-link-text Посмотреть сайт
+  .slider__content
+    +image('slider/2.png', '', 'slider__img')
+  .slider__controls
+    a.slider__button-up(href="#")
+      ul.slider__button-list
+        li.slider__button-item
+          +image('slider/3.jpg', '', 'slider__img')
+    a.slider__button-down(href="#")
+      ul.slider__button-list
+        li.slider__button-item
+          +image('slider/1.jpg', '', 'slider__img')

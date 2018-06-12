@@ -1,0 +1,59 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Мои работы'
+  - 
+    var reviews = [
+      {
+        text: 'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!',
+        img: 'kov',
+        name: 'Ковальчук Дмитрий',
+        post: 'Основатель Loftschool'
+      },{
+        text: 'Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!',
+        img: 'sab',
+        name: 'Сабанцев Владимир',
+        post: 'Преподаватель Loftschool'
+      }
+    ]
+  -
+    var menuFormContact = [
+      {
+        'name': 'Отправить',
+        'href': '#',
+        'class': ['equal', 'submit']
+      },
+      {
+        'name': 'Очистить',
+        'href': '#',
+        'class': ['equal', 'reset']
+      }
+    ]
+
+block scripts
+  script(src='works.bundle.js')
+
+block content
+  section.works
+    +triangles('works')
+    .works__title
+        +title('works', 'works_header', 'Мои работы')
+    .works__content
+      include ../common/slider
+  section.contact    
+    .contact__back
+      +image('bg/contact-bg.png', 'pic', 'contact__img')
+    .contact__content 
+      .contact__title
+        +title('contact','about_header','Что обо мне', 'Говорят')
+      .contact__reviews
+        include ../common/reviews
+      .contact__form
+        .contact__blur
+        .contact__form-title
+          +subtitle('contact','Связаться со мной')
+        include ../common/form-contact
+      .contact__button
+        button.button-scroll.button-scroll--up
+          +icon('arrow_down', 'arrow-scroll')
+          
