@@ -1,0 +1,54 @@
+.reviews {
+  display: flex;
+  width: 780px;
+
+  &__item {
+    margin-right: 20px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    flex: 1;
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    background-image: url('./assets/images/svg-icon/quote-left.svg');
+    width: 27px;
+    height: 27px;
+    top: -45px;
+    opacity: .2;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.reviews__photo {
+  @include circle(80px);
+  @include center;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.reviews__img {
+  max-width: 100%;
+}
+
+.reviews__block {
+  color: $greenLight;
+}
+
+.reviews__name {
+  font-weight: 700;
+}
+

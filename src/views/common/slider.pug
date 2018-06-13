@@ -1,11 +1,10 @@
 .slider
   .slider__about
     .slider__about-title     
-      .subtitle.subtitle_slider
-        .slider__about-title-text       
-    .slider__about-desc 
+      +subtitle('slider', 'Сайт школы онлайн', 'Образования')       
+    .slider__about-desc HTML, CSS, JAVASCRIPT
     a.slider__about-link(href='#' target="_blank")
-      icon('link','slider__about-link-img')
+      +icon('link','slider__about-link-img')
       .slider__about-link-text Посмотреть сайт
   .slider__content
     +image('slider/2.png', '', 'slider__img')

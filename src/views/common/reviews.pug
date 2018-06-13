@@ -1,10 +1,11 @@
 ul.reviews
   each item in reviews
     li.reviews__item
+      .reviews__icon
       .reviews__text #{item.text}
       .reviews__user
         .reviews__photo
-          +image(`reviews/${item.img}.png`, 'pic', 'reviews__img')
+          +image(`reviews/${item.img}.jpg`, 'pic', 'reviews__img')
         .reviews__block
           .reviews__name #{item.name}
           .reviews__post #{item.post}

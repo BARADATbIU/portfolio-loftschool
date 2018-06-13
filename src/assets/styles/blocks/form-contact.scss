@@ -1,0 +1,43 @@
+.form-contact {
+  position: relative;
+  z-index: 1;
+
+  &__container {
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 17px;
+    width: 100%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px 15px;
+    color: $grey;
+
+    &::placeholder {
+      color: $greyLight;
+    }
+  }
+
+  &__textarea {
+    height: 140px;
+    resize: none;
+  }
+
+  &__buttons {
+    width: 100%;
+  }
+}

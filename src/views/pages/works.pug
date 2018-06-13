@@ -8,12 +8,12 @@ block variables
         text: 'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!',
         img: 'kov',
         name: 'Ковальчук Дмитрий',
-        post: 'Основатель Loftschool'
+        post: 'основатель Loftschool'
       },{
         text: 'Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!',
         img: 'sab',
         name: 'Сабанцев Владимир',
-        post: 'Преподаватель Loftschool'
+        post: 'преподаватель Loftschool'
       }
     ]
   -
@@ -48,12 +48,10 @@ block content
         +title('contact','about_header','Что обо мне', 'Говорят')
       .contact__reviews
         include ../common/reviews
-      .contact__form
-        .contact__blur
-        .contact__form-title
-          +subtitle('contact','Связаться со мной')
+      .contact__form-wrapper
+        .contact__form
         include ../common/form-contact
       .contact__button
         button.button-scroll.button-scroll--up
-          +icon('arrow_down', 'arrow-scroll')
+          +icon('portf_arrow_up', 'arrow-scroll')
           
