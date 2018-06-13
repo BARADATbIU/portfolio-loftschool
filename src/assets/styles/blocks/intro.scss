@@ -3,7 +3,7 @@
   @include cover;
 
   &__box {
-    height: 400px;
+    height: 410px;
     width: 380px;
     position: relative;
   }
@@ -18,6 +18,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  
 }
 
 .intro__box-second {
@@ -28,10 +29,11 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 5px;
   background-color: rgba(255, 255, 255, .85);
-  padding: 15px 0;
+  padding-top: 25px;
+  width: 100%;
+  overflow: hidden;
 }

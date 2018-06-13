@@ -16,19 +16,6 @@ block variables
         post: 'преподаватель Loftschool'
       }
     ]
-  -
-    var menuFormContact = [
-      {
-        'name': 'Отправить',
-        'href': '#',
-        'class': ['equal', 'submit']
-      },
-      {
-        'name': 'Очистить',
-        'href': '#',
-        'class': ['equal', 'reset']
-      }
-    ]
 
 block scripts
   script(src='works.bundle.js')
@@ -50,8 +37,9 @@ block content
         include ../common/reviews
       .contact__form-wrapper
         .contact__form
+        +subtitle('form','Связаться со мной')
         include ../common/form-contact
       .contact__button
         button.button-scroll.button-scroll--up
-          +icon('portf_arrow_up', 'arrow-scroll')
+          +icon('portf_arrow_up', 'arrow-scroll', '32px', '16px')
           

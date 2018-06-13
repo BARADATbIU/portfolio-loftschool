@@ -26,5 +26,5 @@
     each item in contacts
       li.contacts__item
         a.contacts__link(href=`${item.link}` target="_blank")
-          +icon(item.img, 'contacts__img')
+          +icon(item.img, 'contacts__img', '24px', '24px')
           .contacts__text #{item.text}

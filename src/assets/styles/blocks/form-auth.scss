@@ -1,9 +1,10 @@
 .form-auth {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
-  padding: 0 20px;
+
+  &__content {
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
 
   &__row {
     display: flex;
@@ -49,8 +50,8 @@
 }
 
 .form-auth__icon {
-  width: 1rem;
-  height: 1rem;
+  width: 16px;
+  height: 16px;
   fill: $greyLight;
 }
 
@@ -85,7 +86,7 @@
 
 .form-auth__radio-fake {
   position: relative;
-  @include circle(1rem);
+  @include circle(16px);
   background-color: white;
 
   &::before {
@@ -109,7 +110,7 @@
 }
 
 .form-auth__checkbox-fake {
-  @include size(1rem, 1rem);
+  @include size(16px, 16px);
   background-color: white;
   position: relative;
 }
@@ -128,4 +129,9 @@
     height: 9px;
     @include centered;
   }
+}
+
+.form-auth__buttons {
+  width: 100%;
+  display: flex;
 }

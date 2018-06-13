@@ -1,5 +1,5 @@
-mixin icon(iconName, iconClass)
-  svg(class=iconClass)
+mixin icon(iconName, iconClass, width, height)
+  svg(class=iconClass style=`width:${width}; height:${height}`)
     use(xlink:href=`./assets/images/icons/sprite.svg#${iconName}`)
 
 mixin image(imagePath, imageAlt, imageClass)
@@ -9,19 +9,15 @@ mixin nav(className, items, activeItem)
   nav(class=className)
     ul(class=`${className}__list`)
       each item, i in items
-        -var modClassName= ''
-        if (item.class)
-          each modClass in item.class
-            - modClassName += ` ${className}__item--${modClass}`
-        li(class=`${className}__item` + modClassName + (i === activeItem ? ' is-active' : ''))
-          a(class=`${className}__link` href=`${item.href ? item.href : '#'}`)= item.name
+        li(class=`${className}__item` + (i === activeItem ? ' is-active' : ''))
+          a(class=`${className}__link` href=item.href)= item.name
 
-mixin socials(modClassName, items)
+mixin socials(modClassName, items, width, height)
   ul.socials(class=(modClassName === '') ? '' : `socials--${modClassName}`)
     each val, item in items
       li(class=`socials__item`)
         a(class=`socials__link` href=`${val}` target="_blank")
-          +icon(item, `socials__icon socials__icon--${item}`)
+          +icon(item, `socials__icon socials__icon--${item}`, width, height)
 
 mixin user(modClassName)
   .user(class=(modClassName === '') ? '' : `user--${modClassName}`)

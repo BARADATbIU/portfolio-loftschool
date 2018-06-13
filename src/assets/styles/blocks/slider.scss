@@ -75,4 +75,31 @@
 .slider__button-up,
 .slider__button-down {
   flex: 1;
+  position: relative;
+
+  &::after {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #b6b4ae;
+    opacity: .7;
+  }
+}
+
+.slider__button-up {
+
+  &::after {
+    content: '';
+    opacity: .5;
+  }
+}
+
+.slider__button-icon {
+  position: absolute;
+  @include centered;
+  z-index: 9;
+  fill: white;
 }

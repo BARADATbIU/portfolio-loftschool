@@ -1,5 +1,4 @@
 form.form-contact(action="")
-  +subtitle('form','Связаться со мной')
   .form-contact__container
     .form-contact__row
       input.form-contact__input(type="text" name='name' placeholder='Имя')
@@ -8,4 +7,5 @@ form.form-contact(action="")
     .form-contact__row
       textarea.form-contact__textarea(placeholder='Ваше сообщение')
   .form-contact__buttons
-    +nav('nav', menuFormContact)
+    button.btn-form(type='submit') Отправить
+    button.btn-form(type='reset') Очистить

@@ -3,12 +3,12 @@ header.section.header
     +user('header')
     +icon('portfolio_header', 'header__title')
   .header__socials
-    +socials('header', socList)
+    +socials('header', socList, '25px', '20px')
   .header__button
     button.button-scroll
-      +icon('arrow_down', 'arrow-scroll')
+      +icon('arrow_down', 'arrow-scroll', '32px', '16px')
 .nav-trigger
   a.nav-trigger__link(href="#")
     .nav-trigger__badge
 .nav-mobile
-  +nav('nav-menu', menu)
+  +nav('nav-mobile__menu', menu)
