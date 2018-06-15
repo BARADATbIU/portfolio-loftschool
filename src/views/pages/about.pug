@@ -7,13 +7,15 @@ block scripts
   script(src='about.bundle.js')
 
 block content
+  include ../common/header
+
   section.about
     +triangles('about')  
     .about__left  
-      .about__left-col
+      .about__col
         .about__title
           +title('about', 'about_header', 'Обо мне') 
-      .about__left-col
+      .about__col
         .user-about
           +image('user-photo-big.jpg', 'Харламов Дмитрий', 'user-about__img')
         .user-about__title

@@ -1,6 +1,15 @@
 .reviews {
   display: flex;
-  width: 780px;
+  max-width: 780px;
+
+  @include tablets {
+    max-width: 100%;
+    margin: 0 20px;
+  }
+
+  @include phones {
+    flex-direction: column;
+  }
 
   &__item {
     margin-right: 20px;
@@ -8,6 +17,9 @@
     margin-bottom: 20px;
     flex: 1;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     &:last-child {
       margin-right: 0;
@@ -20,7 +32,12 @@
     width: 27px;
     height: 27px;
     top: -45px;
+    left: 0;
     opacity: .2;
+
+    @include phones {
+      left: 50%;
+    }
   }
 
   &__text {
@@ -34,10 +51,11 @@
 }
 
 .reviews__photo {
-  @include circle(80px);
+  @include circle(5rem);
   @include center;
   overflow: hidden;
   margin-right: 20px;
+  flex-shrink: 0;
 }
 
 .reviews__img {

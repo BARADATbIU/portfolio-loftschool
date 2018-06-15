@@ -21,6 +21,10 @@
   
     &-right {
       fill: $beige;
+
+      @include tablets {
+        fill: $beigelight;
+      }
     }
   }
 }

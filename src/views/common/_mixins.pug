@@ -24,7 +24,7 @@ mixin user(modClassName)
     .user__photo
       +image('user-photo.jpg', 'Dmitry Kharlamov', 'user__photo-img')
     h2.user__name Харламов Дмитрий
-    span.user__desc Личный сайт вэб разработчика
+    span.user__desc Личный сайт веб разработчика
 
 mixin title(titleName, titleImg, titleText, titlesubText)
   div(class=`title title--${titleName}`)
@@ -49,3 +49,4 @@ mixin nav-blog(activeItem, items)
       each item, i in items
         li(class=`nav-blog__item` + ((i === activeItem) ? ` is-active` : ''))
           a(href=`${item[1]}` class='nav-blog__link')= item[0]
+      a.nav-blog__trigger(href='#')

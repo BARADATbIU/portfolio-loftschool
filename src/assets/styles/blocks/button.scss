@@ -1,7 +1,7 @@
 .btn-flip {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
+  top: 32px;
+  right: 32px;
   background-color: transparent;
   border: 1px solid $white;
   border-radius: 5px;
@@ -10,6 +10,15 @@
   font-weight: 500;
   outline: none;
   transition: .3s;
+
+  &.is-hide {
+    display: none;
+  }
+
+  @include phones {
+    right: 50%;
+    transform: translateX(50%);
+  }
 
   &:hover {
     background-color: white;
