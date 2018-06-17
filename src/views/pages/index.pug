@@ -3,49 +3,34 @@ extends ../auth.layout.pug
 block content
 
   -
-    var menuFirst = [
+    var menuIntro = [
       {
         'name': 'Мои работы',
         'href': './works.html',
-        'class': []
       },
       {
         'name': 'Обо мне',
         'href': './about.html',
-        'class': []
       },
       {
         'name': 'Блог',
         'href': './blog.html',
-        'class': []
-      }
-    ]
-  -
-    var menuSecond = [
-      {
-        'name': 'На главную',
-        'href': '#',
-        'class': ['equal', 'flip']
-      },
-      {
-        'name': 'Войти',
-        'href': '#',
-        'class': ['equal', 'submit']
       }
     ]
 
   section.section.intro
     .intro__box
-      .intro__box-first
-        .intro__content
-          +user('')
-          +socials('', socList)
-        +nav('nav', menuFirst)
-      .intro__box-second
-        .intro__content.intro__content--second
-          include ../common/form-auth
-        +nav('nav', menuSecond)
+      .intro__box-flipper
+        .intro__box-first
+          .intro__content
+            +user('')
+            +socials('', socList, '1.9rem', '1.6rem')
+            +nav('nav', menuIntro)
+        .intro__box-second
+          .intro__content
+            +subtitle('form', 'Авторизуйтесь')
+            include ../common/form-auth
 
-    button.button.button--intro Авторизоваться
+    button.btn-flip#flip Авторизоваться
     .footer-copyright
       include ../common/copyright

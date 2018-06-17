@@ -1,0 +1,13 @@
+.works {
+  position: relative;
+
+  &__title {
+    padding: 50px 0;
+    background-color: #faf8f0;
+  }
+
+  &__content {
+    height: 100vh;
+    min-height: 650px;
+  }
+}

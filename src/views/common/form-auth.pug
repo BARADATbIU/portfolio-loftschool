@@ -1,26 +1,29 @@
 form.form-auth(action="" method="POST")
-  +subtitle('form-auth', 'Авторизуйтесь')
-  .form-auth__row
-    input.form-auth__input(type='text' name='login' placeholder='Логин')
-    .form-auth__icon-container
-      +icon('login', 'form-auth__icon')
-  .form-auth__row
-    input.form-auth__input(type='text' name='password' placeholder='Пароль')
-    .form-auth__icon-container
-      +icon('password', 'form-auth__icon')
-  .form-auth__row
-    label.form-auth__checkbox
-      input.form-auth__checkbox-input(type='checkbox' name='man' value='1')
-      .form-auth__checkbox-fake
-      span.form-auth__block-title Я человек
-  .form-auth__row.form-auth__row--text
-    span.form-auth__block-title.form-auth__block-title--bold Вы точно не робот?
-  .form-auth__row
-    label.form-auth__radio
-      input.form-auth__radio-input(type='radio' name='robot' value='yes')
-      .form-auth__radio-fake
-      span.form-auth__block-title Да
-    label.form-auth__radio
-      input.form-auth__radio-input(type='radio' name='robot' value='no')
-      .form-auth__radio-fake
-      span.form-auth__block-title Не уверен
+  .form-auth__content
+    .form-auth__row
+      input.form-auth__input(type='text' name='login' placeholder='Логин')
+      .form-auth__icon-container
+        +icon('login', 'form-auth__icon', '1rem', '1rem')
+    .form-auth__row
+      input.form-auth__input(type='text' name='password' placeholder='Пароль')
+      .form-auth__icon-container
+        +icon('password', 'form-auth__icon', '1rem', '1rem')
+    .form-auth__row
+      label.form-auth__checkbox
+        input.form-auth__checkbox-input(type='checkbox' name='man' value='1')
+        .form-auth__checkbox-fake
+        span.form-auth__block-title Я человек
+    .form-auth__row.form-auth__row--text
+      span.form-auth__block-title.form-auth__block-title--bold Вы точно не робот?
+    .form-auth__row
+      label.form-auth__radio
+        input.form-auth__radio-input(type='radio' name='robot' value='yes')
+        .form-auth__radio-fake
+        span.form-auth__block-title Да
+      label.form-auth__radio
+        input.form-auth__radio-input(type='radio' name='robot' value='no')
+        .form-auth__radio-fake
+        span.form-auth__block-title Не уверен
+  .form-auth__buttons
+    button.btn-form#flip-back На главную
+    button.btn-form(type='submit') Войти

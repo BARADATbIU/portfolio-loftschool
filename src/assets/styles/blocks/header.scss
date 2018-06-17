@@ -18,21 +18,15 @@
 
 .header__socials {
   position: absolute;
-  top: 2rem;
-  left: 2rem;
+  top: 32px;
+  left: 32px;
 }
 
 .header__button {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 3.5rem;
+  bottom: 64px;
   z-index: 9;
-}
-
-.arrow-scroll {
-  height: 1rem;
-  width: 2rem;
-  fill: $white;
 }
 

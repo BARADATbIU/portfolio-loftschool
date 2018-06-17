@@ -1,28 +1,59 @@
 .about {
   display: flex;
   position: relative;
+
+  @include tablets {
+    flex-direction: column;
+  }
+
   &__left,
   &__right {
     flex: 1;
     padding: 25px 0;
   }
+
   &__left {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
     background-color: $beigelight;
-    &-col {
-      display: flex;
+
+    @include desktop {
       flex-direction: column;
-      flex: 1;
-      margin: 0 20px;
+      align-items: center;
+    } 
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+
+    &:first-child {
+      margin-right: 0;
+      margin-left: 20px;
+
+      @include tablets {
+        margin: 0 auto;
+      }
+    }
+
+    @include phones {
+      margin: 0 10px;
     }
   }
+
   &__title {
     margin-top: -22px;
+    margin-bottom: 50px;
   }
+
   &__right {
-    flex: 1;
     background-color: $beige;
+    display: flex;
+    flex-direction: column;
+
+    @include tablets {
+      align-items: center;
+    }
   }
 }

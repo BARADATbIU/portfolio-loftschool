@@ -15,9 +15,12 @@ html(lang="ru")
   body
     .wrapper
       .maincontent
+        
         block content
 
       include ./common/footer
+
+    include ./components/entry
 
     script(src='bootloader.bundle.js')
     script(src='vendor.bundle.js')

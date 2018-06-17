@@ -21,6 +21,18 @@
   
     &-right {
       fill: $beige;
+
+      @include tablets {
+        fill: $beigelight;
+      }
     }
+  }
+}
+
+.triangles--works {
+
+  .triangles__svg {
+  
+      fill: #faf8f0;
   }
 }

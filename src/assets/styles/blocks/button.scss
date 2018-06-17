@@ -1,27 +1,51 @@
-.button {
+.btn-flip {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 5px;
+  padding: 12px 28px;
   color: $white;
   font-weight: 500;
   outline: none;
-  transition: .3s;
+
+  &.is-hide {
+    display: none;
+  }
+
+  @include phones {
+    right: 50%;
+    transform: translateX(50%);
+  }
 
   &:hover {
     background-color: white;
     color: $greenLight;
     border-color: transparent;
-  }
-}
-
-.button--intro {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  background-color: transparent;
-  border: 1px solid $white;
-  border-radius: 5px;
-  padding: 12px 28px;
+  }  
 }
 
 .button-scroll {
   background-color: transparent;
   outline: none;
+}
+
+.btn-form {
+  color: white;
+  padding: 15px 0;
+  flex: 1;
+  border-right: 2px solid rgba(white, .5);
+  background-color: $greenLight;
+  text-align: center;
+  font-weight: 500;
+  transition: .3s;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  &:hover {
+    background-color: $green;
+  }
 }

@@ -1,0 +1,137 @@
+.slider {
+  display: grid;
+  grid-template: 
+    "info display" 70%
+    "info buttons" 30%
+    / 1fr 1fr;
+  width: 100%;
+  height: 100%;
+
+  @include tablets {
+    grid-template: 
+    "display" 50%
+    "info" 30%
+    "buttons" 20%
+    / 1fr;
+  }
+}
+
+.slider__about-container {
+  grid-area: info;
+  background-color: $beigelight;
+}
+
+.slider__about {
+  @include center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.slider__content {
+  grid-area: display;
+  @include center;
+  background-color: $beige;
+}
+
+.slider__img {
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.slider__controls {
+  grid-area: buttons;
+  display: flex;
+  background-color: $beige;
+}
+
+.slider__about-title {
+  margin-bottom: 25px;
+}
+
+.slider__about-desc {
+  color: $greenLight;
+  padding: 15px 0;
+  font-weight: 500;
+  border-bottom: 1px solid $greenLight;
+  border-top: 1px solid $greenLight;
+  margin-bottom: 25px;
+  width: 50%;
+  text-align: center;
+}
+
+.slider__about-link {
+  display: block;
+  position: relative;
+  padding: 10px 20px 10px 45px;
+  background-color: $greenLight;
+  border-radius: 5px;
+
+  &-img {
+    position: absolute;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+    fill: white;
+  }
+
+  &-text {
+    color: white;
+    font-weight: 500;
+  }
+}
+
+.slider__button-img-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @include center;
+}
+
+.slider__button-pic {
+  max-width: 90%;
+  max-height: 90%;
+  display: block;
+}
+
+.slider__button {
+  flex: 1;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  transition: .5s;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(#000, .3);
+    z-index: 10;
+  }
+
+  &:after {
+    content: "";
+    @include centered;
+    width: 44px;
+    height: 29px;
+    background: svg-load('portf_arrow_down.svg', fill=#ffffff) center center no-repeat / contain;
+    z-index: 20;
+  }
+
+  &--next {
+
+    &:after {
+      background: svg-load('portf_arrow_up.svg', fill=#ffffff) center center no-repeat / contain;
+    }
+  }
+}

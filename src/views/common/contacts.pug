@@ -2,19 +2,19 @@
   var contacts = [
     {
       img: 'skype',
-      text: 'skype_kdn',
-      link: 'tel:skype_kdn'
+      text: 'dimaharlamov',
+      link: 'tel:dimaharlamov'
     },{
       img: 'envelope',
-      text: 'astahov@gmail.com',
-      link: 'mailto:astahov@gmail.com'
+      text: 'newdimaak@gmail.com',
+      link: 'mailto:newdimaak@gmail.com'
     },{
       img: 'phone',
-      text: '+7 931 200 93 24',
+      text: '+375 29 556 35 00',
       link: 'tel:+755555555'
     },{
       img: 'map_marker',
-      text: 'г.Новосибирск, ул. Инская, д. 5',
+      text: 'г. Минск, ул. Рафиева, д. 85',
       link: '#'
     }
   ]
@@ -26,5 +26,5 @@
     each item in contacts
       li.contacts__item
         a.contacts__link(href=`${item.link}` target="_blank")
-          +icon(item.img, 'contacts__img')
+          +icon(item.img, 'contacts__img', '1.5rem', '1.5rem')
           .contacts__text #{item.text}

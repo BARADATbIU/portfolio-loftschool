@@ -5,22 +5,22 @@
 }
 
 :root {
-  font-size: 16px;
+  font-size: 16Px;
 
   @include laptop {
-    font-size: 15px;
+    font-size: 15Px;
   }
 
   @include tablets {
-    font-size: 14px;
+    font-size: 14Px;
   }
 
   @include phones {
-    font-size: 13px;
+    font-size: 13Px;
   }
 
   @include small-phones {
-    font-size: 12px;
+    font-size: 12Px;
   }
 }
 
@@ -32,7 +32,6 @@ body, html {
 
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  font-size: 16px;
   font-weight: 300;
   line-height: 1.42;
   color: $grey;
@@ -44,11 +43,10 @@ body {
   min-height: 100%;
   position: relative;
   display: flex;
-  flex-direction: column;
 }
 
 .maincontent {
-  flex: 1;
+  width: 100%;
 }
 
 .section {
@@ -82,10 +80,6 @@ p {
 a {
   text-decoration: none;
   color: $white;
-}
-
-figure {
-  margin: 0;
 }
 
 .visually-hidden { 

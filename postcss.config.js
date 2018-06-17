@@ -5,8 +5,11 @@ module.exports = {
       extensions: ".scss"
     }),
     require("autoprefixer")({
-      browsers: ["last 2 versions"],
       cascade: false
+    }),
+    require("postcss-pxtorem")({
+      propList: ["*"],
+      minPixelValue: 6
     }),
     require("postcss-advanced-variables")({
       variables: require("./src/assets/styles/variables")

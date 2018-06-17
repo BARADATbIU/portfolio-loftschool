@@ -7,13 +7,8 @@
   text-transform: uppercase;
   @include center;  
 
-  &.subtitle--slider {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  &.subtitle--form-auth {
-    margin-bottom: 25px;
+  &.subtitle--form {
+    position: relative;
   }
 }
 
@@ -21,6 +16,7 @@
   font-size: 35px;
   display: flex;
   align-items: center;
+  text-align: center;
 
   &::before,
   &::after {

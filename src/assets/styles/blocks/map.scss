@@ -1,11 +1,26 @@
 .map {
-  background-image: url('./assets/images/bg/map-bg.jpg');
-  @include cover;
   height: 100vh;
+  min-height: 650px;
   position: relative;
+  overflow: hidden;
+}
+
+.map__block {
+  width: 100%;
+  height: 100%;
 }
 
 .map__data {
-  @include centered;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
   z-index: 1;
+
+  @include phones {
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    width: 100%;
+  }
 }

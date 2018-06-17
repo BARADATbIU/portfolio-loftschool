@@ -7,6 +7,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  @include tablets {
+    padding: 20px;
+    background-color: $greenLight;
+  }
 }
 
 .nav-blog__item {
@@ -19,6 +24,12 @@
     .nav-blog__link {
       color: $greenLight;
       font-weight: 700;
+
+      @include tablets {
+        color: white;
+        opacity: 1;
+      }
+
       &:after {
         top: 0;
         bottom: 0;
@@ -35,6 +46,11 @@
   position: relative;
   transition: .3s;
 
+  @include tablets {
+    color: white;
+    opacity: .7;
+  }
+
   &:after {
     content: '';
     width: 4px;
@@ -45,15 +61,39 @@
     background-color: $greenLight;
     display: block;
     transition: .3s;
+
+    @include tablets {
+      display: none;
+    }
   }
 
   &:hover {
     color: $greenLight;
     font-weight: 700;
 
+    @include tablets {
+      color: white;
+      opacity: 1;
+    }
+
     &:after {
       top: 0;
       bottom: 0;
     }
   } 
+}
+
+.nav-blog__trigger {
+  display: none;
+  background-color: $greenLight;
+  @include circle(50Px);
+
+  @include tablets {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -10Px;
+    z-index: -1;
+  }
 }

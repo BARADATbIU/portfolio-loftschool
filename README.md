@@ -1,6 +1,6 @@
 ## Training Project Portfolio
 
-**Loftschool** - Level 3
+**Loftschool** - Level 3 (4.06.2018 - 9.07.2018)
 
 **Description:** SCSS, PUG, Adaptive, Js, Gulp 4 + Webpack, GoogleMaps
 
@@ -10,6 +10,7 @@
 
 **GitHub Pages:** [portfolio-mountains](https://baradatbiu.github.io/portfolio-loftschool/)
 [![Build Status](https://travis-ci.com/BARADATbIU/portfolio-loftschool.svg?branch=dev)](https://travis-ci.com/BARADATbIU/portfolio-loftschool)
+
 
 ## Node & NPM
 
