@@ -87,6 +87,7 @@
 .form-auth__radio-fake {
   position: relative;
   @include circle(16px);
+  border: 1px solid $beige;
   background-color: white;
 
   &::before {
@@ -110,7 +111,8 @@
 }
 
 .form-auth__checkbox-fake {
-  @include size(16px, 16px);
+  @include size(16Px, 16Px);
+  border: 1px solid $beige;
   background-color: white;
   position: relative;
 }

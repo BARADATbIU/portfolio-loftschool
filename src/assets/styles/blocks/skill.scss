@@ -1,0 +1,33 @@
+.skill {
+  position: relative;
+}
+
+.skill__title {
+  @include centered;
+  max-width: 70px;
+  font-size: 14px;
+  color: $greenLight;
+  text-align: center;
+}
+
+.skill__figure {
+  width: 110Px;
+  height: 110Px;
+  transform: rotate(-90deg);
+}
+
+.skill__circle {
+  stroke-width: 20;
+  fill: transparent;
+}
+
+.skill__circle--under {
+  stroke: #dfdcd5;
+}
+
+.skill__circle--above {
+  stroke: $greenLight;
+  stroke-dasharray: 251;
+  stroke-dashoffset: 251;
+  transition: stroke-dashoffset 1s;
+}

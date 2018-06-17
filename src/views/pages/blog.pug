@@ -33,10 +33,10 @@ block content
 
   .blog
     +triangles('')
-    aside.blog__aside.is-open
+    aside.blog__aside
       +nav-blog(0, blogTitle)
     main.blog__content
-      article.blog__article
+      article.blog__article#article1
         .post
           h4.post__head Самое важное в sass
           time.post__data 22 ноября 2016
@@ -52,7 +52,7 @@ block content
             Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития.
             С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров,
             соответствует насущным потребностям.
-      article.blog__article
+      article.blog__article#article2
         .post
           h4.post__head Приёмы в верстке, без которых не обходится ни один сайт
           time.post__data 13 ноября 2016
