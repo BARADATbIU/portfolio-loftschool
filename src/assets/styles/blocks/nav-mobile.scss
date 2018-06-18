@@ -1,11 +1,11 @@
-.nav-mobile {
+.nav-hide {
   position: fixed;
   right: 0;
   left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999px;
+  z-index: 9;
 
   &.is-active {
     top: 0;
@@ -13,13 +13,13 @@
     background-color: rgba($greenLight, .87);
     transition: .5s;
 
-    .nav-menu {
+    .nav-mobile {
       display: block;
     }
   }
 }
 
-.nav-mobile__menu {
+.nav-mobile {
     display: none;
 
   &__list {
@@ -35,10 +35,35 @@
   }
 
   &__link {
-    font-family: 'sansus';
-    color: $white;
+    font-family: 'bernier';
+    color: white;
     font-size: 63px;
     text-transform: uppercase;
     margin-bottom: 70px;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+
+    &::before,
+    &::after {
+      content: '';
+      margin: 0 15px;
+      width: 22px;
+      height: 5px;
+      background-color: white;
+      opacity: 0;
+      transition: .3s;
+    }
+    
+    &:hover {
+
+      &::before,
+      &::after {
+        content: '';
+        opacity: 1;
+      }
+    }
   }
 }

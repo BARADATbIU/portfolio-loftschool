@@ -1,14 +1,14 @@
-header.section.header
+header.section.header#scroll-up
   .header__about
     +user('header')
     +icon('portfolio_header', 'header__title', '', '15.625rem')
   .header__socials
     +socials('header', socList, '1.6rem', '1.25rem')
   .header__button
-    button.button-scroll
+    a.button-scroll(href='#scroll-down')
       +icon('arrow_down', 'arrow-scroll', '2rem', '1rem')
 .nav-trigger
   a.nav-trigger__link(href="#")
     .nav-trigger__badge
-.nav-mobile
-  +nav('nav-mobile__menu', menu)
+.nav-hide
+  +nav('nav-mobile', menu)
