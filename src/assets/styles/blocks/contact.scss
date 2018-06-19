@@ -8,27 +8,14 @@
   top: 0;
   left: 0;
   right: 0;
-  min-width: 900px;
+  min-width: 900Px;
   z-index: -1;
-}
-
-.contact__img {
-
 }
 
 .contact__content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 150px;
-
-  @include tablets {
-    margin-bottom: 250px;
-  }
-
-  @include phones {
-    margin-bottom: 280px;
-  }
 }
 
 .contact__title {
@@ -43,6 +30,7 @@
   border-radius: 5px;
   overflow: hidden;
   position: relative;
+  max-width: 370px;
 }
 
 .contact__form {
@@ -51,7 +39,8 @@
   height: 100%;
   background-image: url('./assets/images/bg/contact-bg.png');
   background-repeat: no-repeat;
-  background-position: -600px -600px;
+  background-size: 2000Px;
+  filter: blur(20Px);
 }
 
 .contact__button {

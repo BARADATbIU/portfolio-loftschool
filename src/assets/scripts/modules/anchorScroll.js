@@ -1,6 +1,6 @@
 export default function anchorScroll() {
   const links = document.querySelectorAll("[href^='#']");
-  const V = 0.6;
+  const V = 0.6; // scrolling speed
 
   for (const iter of links) {
     iter.addEventListener("click", e => {
@@ -17,14 +17,12 @@ export default function anchorScroll() {
       function step(time) {
         if (start === null) start = time;
         let progress = time - start;
-        console.log(coordAnchor);
-        console.log(time, start);
 
         let coordY =
           coordAnchor < 0
             ? Math.max(windowY - progress / V, windowY + coordAnchor)
             : Math.min(windowY + progress / V, windowY + coordAnchor);
-        console.log(coordY);
+
         window.scrollTo(0, coordY);
         if (coordY != windowY + coordAnchor) {
           requestAnimationFrame(step);
