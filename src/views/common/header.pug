@@ -1,12 +1,15 @@
-header.section.header#scroll-up
+header.header#scroll-up
+  .header__bg
+    +image('bg/about-bg.jpg', 'Mounted', 'header__bg-img')
+  .header__title
+    +icon('portfolio_header', 'header__title-svg', '', '15.625rem')
   .header__about
     +user('header')
-    +icon('portfolio_header', 'header__title', '', '15.625rem')
   .header__socials
     +socials('header', socList, '1.6rem', '1.25rem')
   .header__button
     a.button-scroll(href='#scroll-down')
-      +icon('arrow_down', 'arrow-scroll', '2rem', '1rem')
+      +icon('arrow_down', 'arrow-scroll', '2.5rem', '1.25rem')
 .nav-trigger
   a.nav-trigger__link(href="#")
     .nav-trigger__badge
