@@ -16,7 +16,9 @@ block scripts
 block content
   header.header
     .header__bg
-      +image('bg/about-bg.jpg', 'Mounted', 'header__bg-img')
+    picture
+      source(media="(min-width: 1000px)" srcset="./assets/images/bg/about-bg-desktop.jpg 1x, ./assets/images/bg/about-bg-big.jpg 2x")
+      img(src='./assets/images/bg/about-bg-mobile.jpg' srcset='./assets/images/bg/about-bg-desktop.jpg 2x').header__bg-img
     .header__title
       +icon('blog_header', 'header__title-svg', '', '15.625rem')
     .header__about
