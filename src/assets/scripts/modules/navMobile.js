@@ -3,6 +3,7 @@ export default function navMobile() {
   const trigger = document.querySelector(".nav-trigger__link");
   const navHide = document.querySelector(".nav-hide");
   const navItems = navHide.querySelectorAll(".nav-mobile__item");
+  const body = document.body;
 
   trigger.addEventListener("click", toggleClass);
 
@@ -13,5 +14,6 @@ export default function navMobile() {
   function toggleClass() {
     navTrigger.classList.toggle("is-active");
     navHide.classList.toggle("is-active");
+    body.classList.toggle("overflow-hidden");
   }
 }
