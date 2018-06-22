@@ -1,14 +1,19 @@
-header.section.header
+header.header#scroll-up
+  .header__bg
+    picture
+      source(media="(min-width: 1000px)" srcset="./assets/images/bg/about-bg-desktop.jpg 1x, ./assets/images/bg/about-bg-big.jpg 2x")
+      img(src='./assets/images/bg/about-bg-mobile.jpg' srcset='./assets/images/bg/about-bg-desktop.jpg 2x').header__bg-img
+  .header__title
+    +icon('portfolio_header', 'header__title-svg', '', '15.625rem')
   .header__about
     +user('header')
-    +icon('portfolio_header', 'header__title', '', '15.625rem')
   .header__socials
     +socials('header', socList, '1.6rem', '1.25rem')
   .header__button
-    button.button-scroll
-      +icon('arrow_down', 'arrow-scroll', '2rem', '1rem')
+    a.button-scroll(href='#scroll-down')
+      +icon('arrow_down', 'arrow-scroll', '2.5rem', '1.25rem')
 .nav-trigger
   a.nav-trigger__link(href="#")
     .nav-trigger__badge
-.nav-mobile
-  +nav('nav-mobile__menu', menu)
+.nav-hide
+  +nav('nav-mobile', menu)

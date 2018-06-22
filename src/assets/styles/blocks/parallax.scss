@@ -1,0 +1,98 @@
+.parallax {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  &__layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    @include big {
+      width: 130%;
+    }
+
+    @include desktop {
+      width: 180%;
+    }
+
+    @include laptop {
+      width: 190%;
+    }
+
+    @include tablets {
+      width: 230%;
+    }
+    
+    @include phones {
+      width: 250%;
+    }
+
+    @include small-phones {
+      width: 280%;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    bottom: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 117%;
+
+    &--back {
+      height: 130%;
+    }
+
+    &--cloud1 {
+      width: 20%;
+      bottom: 70%;
+      left: -5%;
+      animation: cloudMove1 95s linear infinite;
+    }    
+
+    &--cloud2 {
+      width: 25%;
+      bottom: 50%;
+      left: -15%;
+      animation: cloudMove2 75s linear infinite;
+    }  
+
+    &--cloud3 {
+      width: 80%;
+      left: -45%;
+      animation: cloudMove3 50s linear infinite;
+    }    
+  }
+}
+
+@keyframes cloudMove1 {
+  from {
+    left: -10%;
+  }
+  to {
+    left: 115%;
+  }
+}
+
+@keyframes cloudMove2 {
+  from {
+    left: -20%;
+  }
+  to {
+    left: 125%;
+  }
+}
+
+@keyframes cloudMove3 {
+  from {
+    left: -45%;
+  }
+  to {
+    left: 145%;
+  }
+}

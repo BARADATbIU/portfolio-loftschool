@@ -27,7 +27,7 @@ block content
     +triangles('works')
     .works__title
         +title('works', 'works_header', 'Мои работы')
-    .works__content
+    .works__content#scroll-down
       #slider-component
 
   section.contact    
@@ -43,6 +43,6 @@ block content
         +subtitle('form','Связаться со мной')
         include ../common/form-contact
       .contact__button
-        button.button-scroll.button-scroll--up
+        a.button-scroll.button-scroll--up(href='#scroll-up')
           +icon('portf_arrow_up', 'arrow-scroll', '32px', '16px')
           

@@ -9,8 +9,8 @@
 
   @include tablets {
     grid-template: 
-    "display" 50%
-    "info" 30%
+    "display" 45%
+    "info" 35%
     "buttons" 20%
     / 1fr;
   }

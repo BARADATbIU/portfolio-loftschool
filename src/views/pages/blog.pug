@@ -14,24 +14,32 @@ block scripts
   script(src='blog.bundle.js')
 
 block content
-  header.section.header
-    .header__blog
-      .user
+  header.header
+    .header__bg
+    picture
+      source(media="(min-width: 1000px)" srcset="./assets/images/bg/about-bg-desktop.jpg 1x, ./assets/images/bg/about-bg-big.jpg 2x")
+      img(src='./assets/images/bg/about-bg-mobile.jpg' srcset='./assets/images/bg/about-bg-desktop.jpg 2x').header__bg-img
+    .header__title
+      +icon('blog_header', 'header__title-svg', '', '15.625rem')
+    .header__about
+      .user.user--header
         .user__photo
           +image('user-photo.jpg', 'Dmitry Kharlamov', 'user__photo-img')
-        +title('blog', 'blog_header', 'Блог', 'Статьи, которые я написал')
+        .title.title--blog
+          h1.title__text Блог
+          .title__subtext Статьи, которые я написал
     .header__socials
       +socials('header', socList, '1.6rem', '1.25rem')
     .header__button
-      button.button-scroll
-        +icon('arrow_down', 'arrow-scroll', '2rem', '1rem')
+      a.button-scroll(href='#scroll-down')
+        +icon('arrow_down', 'arrow-scroll', '2.5rem', '1.25rem')
   .nav-trigger
     a.nav-trigger__link(href="#")
       .nav-trigger__badge
-  .nav-mobile
-    +nav('nav-mobile__menu', menu)
+  .nav-hide
+    +nav('nav-mobile', menu)
 
-  .blog
+  .blog#scroll-down
     +triangles('')
     aside.blog__aside
       +nav-blog(0, blogTitle)
