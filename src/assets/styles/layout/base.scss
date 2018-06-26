@@ -59,6 +59,7 @@ body {
   @include center;
   position: relative;
   min-height: 650px;
+  overflow: hidden;
 }
 
 button {

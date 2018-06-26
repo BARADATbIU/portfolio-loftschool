@@ -4,5 +4,5 @@ export default function setMargin(selector) {
 
   const footerHeight = getComputedStyle(footer).height;
 
-  elem.style.marginBottom = footerHeight;
+  elem.style.paddingBottom = footerHeight;
 }

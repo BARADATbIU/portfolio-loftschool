@@ -1,29 +1,29 @@
 [
   {
     "id": 1,
-    "title" : "1 Сайт школы онлайн образования",
-    "skills" : "1 Html, Css, JavaScript",
+    "title" :"Школа онлайн-образования LoftSchool",
+    "skills" : "Html, Css, JavaScript, PHP",
     "photo" : "./assets/images/content/slider/work-1.png",
     "link" : "//google.com"
   },
   {
     "id": 2,
-    "title" : "2 Сайт школы онлайн образования",
-    "skills" : "2 Html, Css, JavaScript",
+    "title" : "Агенство интернет решений IT Loft",
+    "skills" : "Node, Express, Mongo DB, Angular",
     "photo" : "./assets/images/content/slider/work-2.png",
     "link" : "//yandex.ru"
   },
   {
     "id": 3,
-    "title" : "3 Сайт школы онлайн образования",
-    "skills" : "3 Html, Css, JavaScript",
+    "title" : "Портал обучающих уроков Loftschool",
+    "skills" : "Ruby on Rails, JavaScript, Restfull",
     "photo" : "./assets/images/content/slider/work-3.png",
     "link" : "//rambler.ru"
   },
   {
     "id": 4,
-    "title" : "4 Сайт школы онлайн образования",
-    "skills" : "4 Html, Css, JavaScript",
+    "title" : "Сайт Атма-Йога",
+    "skills" : "UX, Design, SEO",
     "photo" : "./assets/images/content/slider/work-4.png",
     "link" : "//vk.com"
   }
