@@ -14,7 +14,17 @@ const skill = {
       );
       const persents = (dashOffset / 100) * (100 - this.skillPercents);
 
-      circle.style.strokeDashoffset = persents;
+      window.addEventListener("scroll", () => {
+        const windowHeight = document.documentElement.clientHeight / 2;
+        const skillsList = document.querySelector(".skills-list");
+        const skill = this.$refs["opacity-skill"];
+        const skillsListHeight = skillsList.getBoundingClientRect().top;
+
+        if (skillsListHeight < windowHeight) {
+          skill.classList.add("bounceInSkill");
+          circle.style.strokeDashoffset = persents;
+        }
+      });
     }
   },
   mounted() {
