@@ -4,7 +4,9 @@ import navMobile from "./modules/navMobile";
 import setMargin from "./modules/setMargin";
 import scrollParallax from "./modules/scrollParallax";
 import anchorActive from "./modules/anchorActive";
+import preloader from "./modules/preloader";
 
+preloader();
 setMargin(".blog");
 navMobile();
 asideOpen();
