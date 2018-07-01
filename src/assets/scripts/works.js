@@ -4,7 +4,9 @@ import navMobile from "./modules/navMobile";
 import setMargin from "./modules/setMargin";
 import blur from "./modules/blur";
 import scrollParallax from "./modules/scrollParallax";
+import sendForm from "./modules/sendForm";
 
+sendForm("#formContact");
 preloader();
 setMargin(".contact__content");
 navMobile();

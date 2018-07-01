@@ -16,7 +16,7 @@ export default function preloader() {
 
   function imgLoad() {
     counter++;
-    numPreloader.innerHTML = ~~(percent * counter);
+    numPreloader.innerHTML = Math.round(percent * counter);
   }
 
   window.addEventListener("load", setStyle);

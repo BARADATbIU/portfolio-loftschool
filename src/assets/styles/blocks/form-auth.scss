@@ -31,6 +31,14 @@
     padding-left: 60px;
     color: $grey;
 
+    &.error {
+      border: 1px solid #e44845;
+
+      &~.form-auth__icon-container>.form-auth__icon {
+        fill: #e44845;
+      }
+    }
+
     &::placeholder {
       color: $greyLight;
     }
@@ -39,10 +47,11 @@
 
 .form-auth__icon-container {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 1px;
+  left: 1px;
   width: 40px;
-  height: 40px;
+  height: calc(100% - 2px);
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;

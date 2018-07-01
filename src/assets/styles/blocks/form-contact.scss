@@ -12,6 +12,7 @@
     justify-content: center;
     margin-bottom: 17px;
     width: 100%;
+    position: relative;
 
     &:last-child {
       margin-bottom: 0;
@@ -26,6 +27,10 @@
     outline: none;
     padding: 10px 15px;
     color: $grey;
+
+    &.error {
+      border: 1px solid #e44845;
+    }
 
     &::placeholder {
       color: $greyLight;

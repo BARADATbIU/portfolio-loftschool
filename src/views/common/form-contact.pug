@@ -1,11 +1,11 @@
-form.form-contact(action="")
+form#formContact.form-contact(action="server.php" method="POST")
   .form-contact__container
     .form-contact__row
-      input.form-contact__input(type="text" name='name' placeholder='Имя')
+      input.form-contact__input(type="text" name='name' placeholder='Имя' required)
     .form-contact__row
-      input.form-contact__input(type="text" name='email' placeholder='Email')
+      input.form-contact__input(type="text" name='email' placeholder='Email' required)
     .form-contact__row
-      textarea.form-contact__textarea(placeholder='Ваше сообщение')
+      textarea.form-contact__textarea(placeholder='Ваше сообщение' name='mess' required)
   .form-contact__buttons
     button.btn-form(type='submit') Отправить
     button.btn-form(type='reset') Очистить
