@@ -7,6 +7,7 @@ module.exports = {
     require("autoprefixer")({
       cascade: false
     }),
+    require("postcss-preset-env")(),
     require("postcss-pxtorem")({
       propList: ["*"],
       minPixelValue: 6
