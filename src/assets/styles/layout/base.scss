@@ -96,3 +96,15 @@ a {
   white-space: nowrap; 
   width: 1px; 
 }
+
+::selection {
+  background-color: rgba($greenLight, .7);
+}
+
+label, 
+button, 
+input,
+textarea, 
+select { 
+    cursor: pointer; 
+}

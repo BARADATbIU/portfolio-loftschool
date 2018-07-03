@@ -2,14 +2,6 @@ export default function anchorActive() {
   const links = document.querySelectorAll(".nav-blog__link");
   const articles = document.querySelectorAll(".blog__article");
 
-  for (const iter of links) {
-    iter.addEventListener("click", e => {
-      e.preventDefault();
-
-      removeActiveClass(e);
-      e.target.classList.add("is-active");
-    });
-  }
   let positionArticles = [];
 
   window.addEventListener("load", init);
@@ -35,7 +27,7 @@ export default function anchorActive() {
     });
   }
 
-  function removeActiveClass(e) {
+  function removeActiveClass() {
     for (const iter of links) {
       iter.classList.remove("is-active");
     }
@@ -44,11 +36,7 @@ export default function anchorActive() {
   function isVisible(element, current) {
     let scroll = window.pageYOffset;
 
-    return (
-      scroll >= element.top &&
-      scroll < element.bottom &&
-      !current.classList.contains("is-active")
-    );
+    return scroll >= element.top - 5 && scroll < element.bottom;
   }
 
   function setPositionArticles(elements) {

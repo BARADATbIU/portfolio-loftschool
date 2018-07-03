@@ -40,19 +40,6 @@ export default function validateForm(form) {
   }
 
   function showError(field, error) {
-    field.classList.add("error");
-
-    if (field.type === "radio" && field.name) {
-      let group = document.getElementsByName(field.name);
-
-      if (group.length > 0) {
-        for (let i = 0; i < group.length; i++) {
-          group[i].classList.add("error");
-        }
-        field = group[group.length - 1];
-      }
-    }
-
     // Get field id or name
     const id = field.id || field.name;
     if (!id) return;
@@ -88,20 +75,6 @@ export default function validateForm(form) {
   }
 
   function removeError(field) {
-    field.classList.remove("error");
-
-    // If the field is a radio button and part of a group, remove error from all and get the last item in the group
-    if (field.type === "radio" && field.name) {
-      let group = document.getElementsByName(field.name);
-
-      if (group.length > 0) {
-        for (let i = 0; i < group.length; i++) {
-          group[i].classList.remove("error");
-        }
-        field = group[group.length - 1];
-      }
-    }
-
     const id = field.id || field.name;
     if (!id) return;
 

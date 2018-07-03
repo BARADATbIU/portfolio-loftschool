@@ -31,11 +31,19 @@
     padding-left: 60px;
     color: $grey;
 
-    &.error {
+    &:focus:invalid {
       border: 1px solid #e44845;
 
       &~.form-auth__icon-container>.form-auth__icon {
         fill: #e44845;
+      }
+    }
+
+    &:valid {
+      border: 1px solid $greenLight;
+
+      &~.form-auth__icon-container>.form-auth__icon {
+        fill: $greenLight;
       }
     }
 

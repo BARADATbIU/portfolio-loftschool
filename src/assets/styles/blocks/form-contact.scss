@@ -28,9 +28,14 @@
     padding: 10px 15px;
     color: $grey;
 
-    &.error {
+    &:focus:invalid {
       border: 1px solid #e44845;
     }
+
+    &:valid {
+      border: 1px solid $greenLight;
+    }
+
 
     &::placeholder {
       color: $greyLight;
