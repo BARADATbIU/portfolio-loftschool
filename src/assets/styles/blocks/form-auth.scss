@@ -31,6 +31,22 @@
     padding-left: 60px;
     color: $grey;
 
+    &:focus:invalid {
+      border: 1px solid #e44845;
+
+      &~.form-auth__icon-container>.form-auth__icon {
+        fill: #e44845;
+      }
+    }
+
+    &:valid {
+      border: 1px solid $greenLight;
+
+      &~.form-auth__icon-container>.form-auth__icon {
+        fill: $greenLight;
+      }
+    }
+
     &::placeholder {
       color: $greyLight;
     }
@@ -39,10 +55,11 @@
 
 .form-auth__icon-container {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 1px;
+  left: 1px;
   width: 40px;
-  height: 40px;
+  height: calc(100% - 2px);
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,7 +142,7 @@
 
   &+.form-auth__checkbox-fake::before {
     content: '';   
-    background: url('/assets/images/svg-icon/check.svg') 50% no-repeat;
+    background: url('./assets/images/svg-icon/check.svg') 50% no-repeat;
     background-size: contain;
     width: 11px;
     height: 9px;

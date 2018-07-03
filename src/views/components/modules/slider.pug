@@ -16,23 +16,31 @@ script(type="text/x-template")#slider
 script(type="text/x-template")#slider-info
   .slider__about-container
     .slider__about
-      .slider__about-title
-        .subtitle
+      transition-group(name='slide-flip' tag='div').slider__about-title
+        .subtitle.subtitle--absolute(:key='work.title')
           h2.subtitle__text {{work.title}}
-      .slider__about-desc {{work.skills}}
+      transition-group(
+        appear
+        :css="false"
+        @enter="enterHandler"
+      )
+        .slider__about-desc(:key='work.skills') {{work.skills}}
       a.slider__about-link(:href="work.link" target="_blank")
         +icon('link','slider__about-link-img', '1.25rem', '1.25rem')
         .slider__about-link-text Посмотреть сайт
 
 script(type="text/x-template")#slider-display
   .slider__content
-    img(:src="work.photo").slider__img
+    transition-group(name='slide-appear' tag='div').slider__img-container
+        img(:src="work.photo").slider__img(:key='work.photo')
 
 script(type="text/x-template")#slider-buttons
   .slider__controls
     .slider__button(@click="slide('prev')")
-      .slider__button-img-wrap
-        img(:src="getReqImage('prev').photo", alt="").slider__button-pic
+      transition-group(name="slide-down" tag="div").slider__button-img-container
+        .slider__button-img-wrap(:key="getReqImage('prev').photo")
+          img(:src="getReqImage('prev').photo", alt="").slider__button-pic
     .slider__button.slider__button--next(@click="slide('next')")
-      .slider__button-img-wrap
-        img(:src="getReqImage('next').photo", alt="").slider__button-pic
+      transition-group(name="slide-up" tag="div").slider__button-img-container
+        .slider__button-img-wrap(:key="getReqImage('next').photo")
+          img(:src="getReqImage('next').photo", alt="").slider__button-pic

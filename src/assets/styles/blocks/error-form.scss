@@ -1,0 +1,22 @@
+.error-message {
+  position: absolute;
+  top: 100%;
+  padding: 10px 15px;
+  margin-top: 10px;
+  color: white;
+  font-weight: 500;
+  background-color: #e44845;
+  border-radius: 5px;
+  z-index: 99;
+  opacity: 0.9;
+
+  &::after {
+    content: "";
+    border: 8px solid transparent;
+    border-bottom-color: #e44845;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

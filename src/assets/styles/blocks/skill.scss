@@ -1,5 +1,6 @@
 .skill {
   position: relative;
+  opacity: 0;
 }
 
 .skill__title {
@@ -29,5 +30,11 @@
   stroke: $greenLight;
   stroke-dasharray: 251;
   stroke-dashoffset: 251;
-  transition: stroke-dashoffset 1s;
+  transition: stroke-dashoffset 1.5s .5s;
+}
+
+.bounceInSkill {
+  animation-duration: 0.75s;
+  animation-name: bounceIn;
+  animation-fill-mode: forwards;
 }

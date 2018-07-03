@@ -59,6 +59,7 @@ body {
   @include center;
   position: relative;
   min-height: 650px;
+  overflow: hidden;
 }
 
 button {
@@ -94,4 +95,16 @@ a {
   position: absolute; 
   white-space: nowrap; 
   width: 1px; 
+}
+
+::selection {
+  background-color: rgba($greenLight, .7);
+}
+
+label, 
+button, 
+input,
+textarea, 
+select { 
+    cursor: pointer; 
 }
