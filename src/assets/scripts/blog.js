@@ -1,3 +1,5 @@
+import "./modules/posts";
+import "./modules/menu";
 import asideOpen from "./modules/asideOpen";
 import anchorScroll from "./modules/anchorScroll";
 import navMobile from "./modules/navMobile";
@@ -10,8 +12,9 @@ preloader();
 setMargin(".blog");
 navMobile();
 asideOpen();
-anchorScroll();
 anchorActive();
+
+window.addEventListener("load", anchorScroll);
 
 window.addEventListener("resize", () => {
   setMargin(".blog");

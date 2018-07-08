@@ -10,6 +10,7 @@ module.exports = {
     require("postcss-preset-env")(),
     require("postcss-pxtorem")({
       propList: ["*"],
+      selectorBlackList: [":root"],
       minPixelValue: 6
     }),
     require("postcss-advanced-variables")({

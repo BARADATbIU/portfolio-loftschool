@@ -2,9 +2,9 @@ import flip from "./modules/flip";
 import moveParallax from "./modules/moveParallax";
 import isMobileDevice from "./modules/isMobileDevice";
 import preloader from "./modules/preloader";
-import sendForm from "./modules/sendForm";
+import { login } from "./modules/login";
 
-sendForm("#formAuth");
+login("#formAuth");
 preloader();
 flip();
 
