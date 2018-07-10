@@ -31,7 +31,7 @@ function ajaxLogin(form) {
       localStorage.setItem("ttl", ttl);
     })
     .then(() => {
-      window.location.href = "/admin";
+      window.location.href = "/portfolio-loftschool/admin";
     })
     .catch(error => {
       renderPopup(sadSmile, error);
