@@ -31,7 +31,7 @@ function ajaxLogin(form) {
       localStorage.setItem("ttl", ttl);
     })
     .then(() => {
-      window.location.replace("/admin");
+      window.location.href = "/admin";
     })
     .catch(error => {
       renderPopup(sadSmile, error);

@@ -33,7 +33,7 @@ export default {
         link: "",
         photo: ""
       }
-    }
+    };
   },
   computed: {
     ...mapState({
@@ -57,7 +57,7 @@ export default {
       Object.keys(this.newWork).forEach(prop => {
         formData.append(prop, this.newWork[prop]);
       });
-      
+
       this.addNewWork(formData).then(res => {
         this.newWork.title = "";
         this.newWork.techs = "";

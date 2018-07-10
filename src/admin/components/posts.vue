@@ -29,7 +29,7 @@ export default {
         date: "",
         content: ""
       }
-    }
+    };
   },
   computed: {
     ...mapState({
@@ -58,7 +58,7 @@ export default {
       this.removeExistedPost(post.id);
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
