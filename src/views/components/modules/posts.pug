@@ -1,0 +1,7 @@
+script(type="text/x-template")#posts
+  .article__list
+    article.blog__article(v-for="post, i in posts" :id="'article' + (i + 1)")
+      .post
+        h4.post__head {{ post.title }}
+        time.post__data {{ dataView(post.date) }}
+        p.post__content {{ post.content }}

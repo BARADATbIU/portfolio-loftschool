@@ -1,0 +1,6 @@
+script(type="text/x-template")#menu
+  .nav-blog       
+    ul.nav-blog__list
+      li.nav-blog__item(v-for="post, i in posts")
+        a(:href="'#article' + (i + 1)").nav-blog__link {{ post.title }}
+    a.nav-blog__trigger(href='#')

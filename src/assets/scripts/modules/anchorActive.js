@@ -1,13 +1,16 @@
 export default function anchorActive() {
-  const links = document.querySelectorAll(".nav-blog__link");
-  const articles = document.querySelectorAll(".blog__article");
-
+  let links;
+  let articles;
   let positionArticles = [];
 
   window.addEventListener("load", init);
 
   function init() {
+    links = document.querySelectorAll(".nav-blog__link");
+    articles = document.querySelectorAll(".blog__article");
     positionArticles = setPositionArticles(articles);
+
+    scrollActiveClass();
 
     window.addEventListener("resize", () => {
       positionArticles = setPositionArticles(articles);
