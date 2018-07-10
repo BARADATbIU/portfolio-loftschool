@@ -16,14 +16,14 @@ import posts from "./components/posts.vue";
 
 const routes = [
   {
-    path: "/",
+    path: "/portfolio-loftschool/admin",
     components: {
       header: header,
       tabs: tabs
     }
   },
   {
-    path: "/skills",
+    path: "/portfolio-loftschool/admin/skills",
     components: {
       default: skills,
       header: header,
@@ -31,7 +31,7 @@ const routes = [
     }
   },
   {
-    path: "/works",
+    path: "/portfolio-loftschool/admin/works",
     components: {
       default: works,
       header: header,
@@ -39,7 +39,7 @@ const routes = [
     }
   },
   {
-    path: "/posts",
+    path: "/portfolio-loftschool/admin/posts",
     components: {
       default: posts,
       header: header,
