@@ -2,7 +2,7 @@
 
 **Loftschool** - Level 3 (4.06.2018 - 9.07.2018)
 
-**Description:** SCSS, PUG, Adaptive, Js, Gulp 4 + Webpack, GoogleMaps
+**Description:** SCSS, PUG, Adaptive, Js, Vue.js, admin panel (API), Gulp 4 + Webpack, GoogleMaps
 
 **Ученик:** Харламов Дмитрий
 
