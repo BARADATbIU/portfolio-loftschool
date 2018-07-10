@@ -12,9 +12,9 @@ export default {
   data() {
     return {
       tabs: [
-        { title: "Обо мне", href: "/skills" },
-        { title: "Работы", href: "/works" },
-        { title: "Блог", href: "/posts" }
+        { title: "Обо мне", href: "/portfolio-loftschool/admin/skills" },
+        { title: "Работы", href: "/portfolio-loftschool/admin/works" },
+        { title: "Блог", href: "/portfolio-loftschool/admin/posts" }
       ]
     };
   }
