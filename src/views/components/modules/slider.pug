@@ -32,15 +32,15 @@ script(type="text/x-template")#slider-info
 script(type="text/x-template")#slider-display
   .slider__content
     transition-group(name='slide-appear' tag='div').slider__img-container
-        img(:src="'http://webdev-api.loftschool.com/' + work.photo" :key='work.photo').slider__img
+        img(:src="'https://webdev-api.loftschool.com/' + work.photo" :key='work.photo').slider__img
 
 script(type="text/x-template")#slider-buttons
   .slider__controls
     .slider__button(@click="slide('prev')")
       transition-group(name="slide-down" tag="div").slider__button-img-container
         .slider__button-img-wrap(:key="getReqImage('prev').photo")
-          img(:src="'http://webdev-api.loftschool.com/' + getReqImage('prev').photo", alt="").slider__button-pic
+          img(:src="'https://webdev-api.loftschool.com/' + getReqImage('prev').photo", alt="").slider__button-pic
     .slider__button.slider__button--next(@click="slide('next')")
       transition-group(name="slide-up" tag="div").slider__button-img-container
         .slider__button-img-wrap(:key="getReqImage('next').photo")
-          img(:src="'http://webdev-api.loftschool.com/' + getReqImage('next').photo", alt="").slider__button-pic
+          img(:src="'https://webdev-api.loftschool.com/' + getReqImage('next').photo", alt="").slider__button-pic

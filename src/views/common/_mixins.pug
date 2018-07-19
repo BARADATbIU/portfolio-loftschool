@@ -42,11 +42,4 @@ mixin triangles(modClassName)
     svg(viewBox='0 0 1000 110' preserveAspectRatio='none').triangles__svg
       polygon(points='0,0 0,110 500,110').triangles__svg-left
       polygon(points='500,110 1000,0 1000,110').triangles__svg-right
-
-mixin nav-blog(activeItem, items) 
-  .nav-blog       
-    ul.nav-blog__list
-      each item, i in items
-        li(class=`nav-blog__item`)
-          a(href=`${item[1]}` class=`nav-blog__link` + ((i === activeItem) ? ` is-active` : ''))= item[0]
-      a.nav-blog__trigger(href='#')
+      

@@ -7,7 +7,7 @@ new Vue({
     posts: []
   },
   created() {
-    axios.get("http://webdev-api.loftschool.com/posts/6").then(response => {
+    axios.get("https://webdev-api.loftschool.com/posts/6").then(response => {
       this.posts = response.data;
     });
   },

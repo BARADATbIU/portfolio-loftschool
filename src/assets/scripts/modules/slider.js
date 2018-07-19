@@ -105,7 +105,7 @@ new Vue({
     }
   },
   created() {
-    axios.get("http://webdev-api.loftschool.com/works/6").then(response => {
+    axios.get("https://webdev-api.loftschool.com/works/6").then(response => {
       console.log(response.data);
       this.works = response.data;
       this.currentWork = this.works[0];

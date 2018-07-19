@@ -70,7 +70,7 @@ new Vue({
     ]
   },
   created() {
-    axios.get("http://webdev-api.loftschool.com/skills/6").then(response => {
+    axios.get("https://webdev-api.loftschool.com/skills/6").then(response => {
       this.skills = response.data;
     });
   },
